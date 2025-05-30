@@ -25,16 +25,16 @@ Insight is available publicly hosted for invites directly to Discord servers. Th
 
 See [hosting Insight](#hosting-insight) if you are interested in hosting your own private instance of Insight.
 ## Public Insight Bot
-[![Discord Bots](https://discordbots.org/api/widget/463952393206497290.svg)](https://discordbots.org/bot/463952393206497290)
-* **Insight** (with preconfigured role): [Insight Bot Invite Link](https://discordapp.com/api/oauth2/authorize?client_id=463952393206497290&permissions=149504&scope=bot)
-* **Insight** (without preconfigured role): [Insight Bot Invite Link](https://discordapp.com/api/oauth2/authorize?client_id=463952393206497290&permissions=0&scope=bot)
+[![Discord Bots](https://discordbots.org/api/widget/463952393206497290.svg)](#)
+* **Insight** (with preconfigured role): [Insight Bot Invite Link](#)
+* **Insight** (without preconfigured role): [Insight Bot Invite Link](#)
 
 ## Test Bot
-* [Insight Test Bot Invite](https://discordapp.com/api/oauth2/authorize?client_id=477314845608378369&permissions=149504&scope=bot)
+* [Insight Test Bot Invite](#)
   * This test bot normally runs the latest development branch build. There are no guarantees of uptime or stability. Data from this test bot is often wiped.
 
 ## Support Discord
-If you have questions, suggestions, or bug reports feel free to drop by the [project support server.](https://discord.gg/Np3FCUn)
+If you have questions, suggestions, or bug reports feel free to drop by the [project support server.](https://discord.gg/qrUNDDcDn5)
 
 # Donate
 If you enjoy Insight, please consider donating ISK to [Natuli](https://evewho.com/character/1326083433) in-game.
