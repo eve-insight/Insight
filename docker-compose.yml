@@ -33,8 +33,23 @@ services:
     networks:
       - insight-net
     command: --requirepass "pass"
+  db:
+    image: postgres:16
+    container_name: postgres_db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: eveinsight
+      POSTGRES_PASSWORD:
+      POSTGRES_DB: eveinsight
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - insight-net
 networks:
   insight-net:
     driver: bridge
 volumes:
   insight-data:
+  db_data:
