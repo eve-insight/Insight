@@ -1,0 +1,39 @@
+services:
+  insight:
+    image: nathanls/insight:latest
+    restart: always
+    #build:
+      #context: .
+      #dockerfile: ./scripts/Docker/Dockerfile
+    environment:
+      DB_DRIVER: "sqlite3"
+      SQLITE_DB_PATH: "Database.db"
+      HEADERS_FROM_EMAIL: "YourEmailHere"
+      DISCORD_TOKEN: ""
+      CCP_CLIENT_ID: ""
+      CCP_SECRET_KEY: ""
+      CCP_CALLBACK_URL: "https://raw.githubusercontent.com/EVEInsight/Insight/master/Insight/callback/index.html"
+      REDIS_HOST: "redis"
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: "pass"
+      REDIS_PURGE: "FALSE"
+      REDIS_SSL: "FALSE"
+      ZK_REDISQ_URL: "https://zkillredisq.stream/listen.php"
+      INSIGHT_ADMINS: ""
+      #INSIGHT_ENCRYPTION_KEY: ""
+      WEBSERVER_ENABLED: "FALSE"
+    volumes:
+      - insight-data:/app
+    networks:
+      - insight-net
+  redis:
+    image: redis:6
+    restart: always
+    networks:
+      - insight-net
+    command: --requirepass "pass"
+networks:
+  insight-net:
+    driver: bridge
+volumes:
+  insight-data:
