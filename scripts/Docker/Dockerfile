@@ -1,6 +1,6 @@
-ARG PythonTag="3.6.15-buster"
+ARG PythonTag="3.9.22-bullseye"
 
-FROM openjdk:11 as SwaggerRunner
+FROM openjdk:11 AS swagger
 ARG CodegenVersion="2.4.25"
 RUN wget https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/$CodegenVersion/swagger-codegen-cli-$CodegenVersion.jar -O swagger-codegen-cli.jar
 RUN java -jar ./swagger-codegen-cli.jar generate \
@@ -8,7 +8,7 @@ RUN java -jar ./swagger-codegen-cli.jar generate \
  -l python \
  -o /python-client
 
-FROM alpine:latest as SDE
+FROM alpine:latest AS sde
 RUN wget https://www.fuzzwork.co.uk/dump/sqlite-latest.sqlite.bz2
 RUN wget https://www.fuzzwork.co.uk/dump/sqlite-latest.sqlite.bz2.md5
 RUN md5sum -c sqlite-latest.sqlite.bz2.md5
@@ -74,7 +74,7 @@ ENV SUBSYSTEM_CACHE_LASTSHIP_TTL=""
 ENV CRON_SYNCCONTACTS=""
 ENV INSIGHT_ADMINS=""
 ENV 8BALL_RESPONSES=""
-ENV ZK_REDISQ_URL="https://redisq.zkillboard.com/listen.php"
+ENV ZK_REDISQ_URL="https://zkillredisq.stream/listen.php"
 ENV ZK_WS_URL="wss://zkillboard.com/websocket/"
 ENV ZK_ID_RESET=""
 ENV REIMPORT_LOCATIONS_MINUTES=""
@@ -124,8 +124,8 @@ RUN useradd --system --shell /bin/bash --home /app -u 1006 -g insight insight
 RUN chown insight:insight /InsightDocker /app /home/insight
 USER insight
 WORKDIR /InsightDocker
-COPY --from=SwaggerRunner /python-client ./python-client
-COPY --from=SDE /sqlite-latest.sqlite ./sqlite-latest.sqlite
+COPY --from=swagger /python-client ./python-client
+COPY --from=sde /sqlite-latest.sqlite ./sqlite-latest.sqlite
 WORKDIR /InsightDocker/Insight
 COPY ./Insight ./Insight
 COPY ./scripts ./scripts

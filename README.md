@@ -1,6 +1,8 @@
 # Project Status
-This project and repository is no longer actively maintained or supported. See [The Future of Insight](https://github.com/EVEInsight/Insight/blob/master/the_future_of_Insight.md) document for reasoning and an FAQ.
-Thank you all for supporting and enjoying Insight over the years!
+~~This project and repository is no longer actively maintained or supported. See [The Future of Insight](https://github.com/EVEInsight/Insight/blob/master/the_future_of_Insight.md) document for reasoning and an FAQ.
+Thank you all for supporting and enjoying Insight over the years!~~
+
+Trying to revive and support...
 
 Fly safe o7
 

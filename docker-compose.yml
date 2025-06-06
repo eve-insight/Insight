@@ -1,10 +1,11 @@
 services:
   insight:
-    image: nathanls/insight:latest
+    image: cybadmin/eveinsight:latest
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ./scripts/Docker/Dockerfile
     restart: always
-    #build:
-      #context: .
-      #dockerfile: ./scripts/Docker/Dockerfile
     environment:
       DB_DRIVER: "sqlite3"
       SQLITE_DB_PATH: "Database.db"
@@ -32,8 +33,23 @@ services:
     networks:
       - insight-net
     command: --requirepass "pass"
+  db:
+    image: postgres:16
+    container_name: postgres_db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: eveinsight
+      POSTGRES_PASSWORD:
+      POSTGRES_DB: eveinsight
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - insight-net
 networks:
   insight-net:
     driver: bridge
 volumes:
   insight-data:
+  db_data:
