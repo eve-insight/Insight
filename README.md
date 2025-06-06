@@ -9,10 +9,9 @@ Fly safe o7
 # Insight v1.7.0
 [![](https://img.shields.io/badge/-EVEInsight.net-154360)](https://eveinsight.net)
 [![](https://img.shields.io/docker/pulls/nathanls/insight.svg)](https://hub.docker.com/r/nathanls/insight)
-[![Build status](https://ci.appveyor.com/api/projects/status/8il5or4sw7x6sa8n?svg=true)](https://ci.appveyor.com/project/Nathan-LS/insight)
-[![codecov](https://codecov.io/gh/Nathan-LS/Insight/branch/development/graph/badge.svg)](https://codecov.io/gh/Nathan-LS/Insight)
+[![testing](https://github.com/eve-insight/Insight/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/eve-insight/Insight/actions/workflows/python-app.yml)
 [![](https://img.shields.io/github/license/Nathan-LS/Insight.svg)](https://github.com/Nathan-LS/Insight/blob/master/LICENSE.md)
-[![](https://img.shields.io/discord/379777846144532480.svg)](https://discord.gg/Np3FCUn)
+[![](https://img.shields.io/discord/1377957253696589895.svg)](https://discord.gg/qrUNDDcDn5)
 [![](https://img.shields.io/badge/-Wiki-blueviolet)](https://wiki.eveinsight.net)
 
 Insight provides [EVE Online](https://www.eveonline.com/) killmail streaming and utility commands for Discord. Insight can stream personal or corporate killboards, detect supercapitals with a proximity radar, estimate ship composition from local chat scans, and more!
