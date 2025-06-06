@@ -10,7 +10,6 @@ Fly safe o7
 [![](https://img.shields.io/badge/-EVEInsight.net-154360)](https://eveinsight.net)
 [![](https://img.shields.io/docker/pulls/nathanls/insight.svg)](https://hub.docker.com/r/nathanls/insight)
 [![testing](https://github.com/eve-insight/Insight/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/eve-insight/Insight/actions/workflows/python-app.yml)
-[![codecov](https://codecov.io/gh/Nathan-LS/Insight/branch/development/graph/badge.svg)](https://codecov.io/gh/Nathan-LS/Insight)
 [![](https://img.shields.io/github/license/Nathan-LS/Insight.svg)](https://github.com/Nathan-LS/Insight/blob/master/LICENSE.md)
 [![](https://img.shields.io/discord/1377957253696589895.svg)](https://discord.gg/qrUNDDcDn5)
 [![](https://img.shields.io/badge/-Wiki-blueviolet)](https://wiki.eveinsight.net)
